@@ -1,7 +1,8 @@
 # coding=utf-8
 import pandas
 import sklearn
-from sklearn.cross_validation import KFold, cross_val_score
+#from sklearn.cross_validation import KFold, cross_val_score
+from sklearn.model_selection import KFold, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 
 import sys
