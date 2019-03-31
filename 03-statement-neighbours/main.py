@@ -34,6 +34,7 @@ kf = KFold(n_splits=5, shuffle=True, random_state=42)
 def test_accuracy(kf, X, y):
     scores = list()
     k_range = xrange(1, 51)
+    #k_range = range(1, 51) (for Python 3)
     for k in k_range:
         model = KNeighborsClassifier(n_neighbors=k)
         scores.append(cross_val_score(model, X, y, cv=kf, scoring='accuracy'))
